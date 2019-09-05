@@ -6,6 +6,8 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 addr = ("localhost",12458)
 sock.connect(addr)
 
+print("got here")
+
 msg1 = "Hey Ben"
 msg2 = "Hi Hecty"
 
