@@ -14,9 +14,6 @@ for line in file:
 
 while(True):
 	try:
-		for line in file:
-			sock.sendall(line.encode())
-			
 		msg = sock.recv(1024).decode()
 		print(msg)
 
