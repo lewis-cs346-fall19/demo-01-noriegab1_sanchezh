@@ -17,10 +17,9 @@ def send_message(line):
 	sock.sendall(line.encode())
 
 
-while(True):
+for line in file:
 	try:
-		for line in file:
-			send_message(line)
+		send_message(line)
 
 		msg = sock.recv(1024).decode()
 		print(msg)
