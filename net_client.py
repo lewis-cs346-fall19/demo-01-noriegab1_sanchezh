@@ -14,7 +14,7 @@ file = open('github_lab.txt')
 
 
 def send_message(line):
-	sock.sendall(line.encode())
+	sock.send(line.encode())
 
 
 for line in file:

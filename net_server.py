@@ -23,7 +23,7 @@ while(True):
 
 		reply = msg + ' - received'
 
-		connectedSock.sendall(reply.encode())
+		connectedSock.send(reply.encode())
 	except ConnectionAbortedError:
 		sock.close()
 sock.close()
