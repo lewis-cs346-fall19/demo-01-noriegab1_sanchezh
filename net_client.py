@@ -16,6 +16,6 @@ sock.sendall(msg2.encode())
 
 try:
 	msg = sock.recv(1024).decode()
-	print(len(msg))
+	print(msg)
 except ConnectionAbortedError:
 	sock.close()
