@@ -16,7 +16,9 @@ while(True):
 	try:
 		msg = connectedSock.recv(1024).decode()
 
-		print(len(msg))
+		print(msg)
+
+		msg += ' received'
 		connectedSock.sendall(msg.encode())
 	except ConnectionAbortedError:
 		sock.close()
