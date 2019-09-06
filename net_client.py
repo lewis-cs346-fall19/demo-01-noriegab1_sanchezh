@@ -12,14 +12,14 @@ sock.connect(addr)
 file = open('github_lab.txt')
 
 
-
 def send_message(line):
-	sock.send(line.encode())
+	sock.sendall(line.encode)
 
 
-for line in file:
+while(True):
 	try:
-		send_message(line)
+		for line in file:
+			send_message(line)
 
 		msg = sock.recv(1024).decode()
 		print(msg)
