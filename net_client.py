@@ -8,9 +8,11 @@ sock.connect(addr)
 
 # print("got here")
 
-msg1 = "Hey Ben"
+file = open('github_lab.txt')
+for line in file:
+	sock.sendall(line.encode())
 
-sock.sendall(msg1.encode())
+
 
 while(True):
 	try:
