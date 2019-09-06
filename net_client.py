@@ -8,13 +8,24 @@ sock.connect(addr)
 
 # print("got here")
 
+
 file = open('github_lab.txt')
-for line in file:
+
+
+
+def send_message(line):
 	sock.sendall(line.encode())
 
 
-msg = sock.recv(1024).decode()
-print(msg)
+while(True):
+	try:
+		for line in file:
+			send_message(line)
 
+		msg = sock.recv(1024).decode()
+		print(msg)
+
+	except ConnectionAbortedError:
+		sock.close()
 
 sock.close()
