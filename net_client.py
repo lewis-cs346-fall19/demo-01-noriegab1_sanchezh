@@ -11,8 +11,6 @@ sock.connect(addr)
 msg1 = "Hey Ben"
 
 sock.sendall(msg1.encode())
-sock.sendall(msg2.encode())
-
 
 while(True):
 	try:
