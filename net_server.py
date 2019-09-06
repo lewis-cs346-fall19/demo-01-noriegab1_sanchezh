@@ -7,10 +7,10 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 addr = ("localhost", 12458)
 sock.bind(addr)
 
-# Listening and Accepting
-sock.listen(5)
-
 while(True):
+	# Listening and Accepting
+	sock.listen(5)
+	
 	(connectedSock, clientAddress) = sock.accept()
 	# Receiving Data
 	try:
