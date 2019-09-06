@@ -12,15 +12,15 @@ msg1 = "Hey Ben"
 msg2 = "Hi Hecty"
 
 sock.sendall(msg1.encode())
+sock.sendall(msg2.encode())
 
 
+while(True):
+	try:
+		msg = sock.recv(1024).decode()
+		print(msg)
 
-try:
-	msg = sock.recv(1024).decode()
-	print(msg)
-	sock.sendall(msg2.encode())
-
-except ConnectionAbortedError:
-	sock.close()
+	except ConnectionAbortedError:
+		sock.close()
 
 sock.close()
