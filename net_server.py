@@ -4,7 +4,7 @@ import socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Binding To Port
-addr = ("0.0.0.0", 12458)
+addr = ("localhost", 12458)
 sock.bind(addr)
 
 # Listening and Accepting
