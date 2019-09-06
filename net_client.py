@@ -9,7 +9,6 @@ sock.connect(addr)
 # print("got here")
 
 msg1 = "Hey Ben"
-msg2 = "Hi Hecty"
 
 sock.sendall(msg1.encode())
 sock.sendall(msg2.encode())
