@@ -18,7 +18,9 @@ while(True):
 
 		print(msg)
 
-		msg += ' received'
+		reply = f"'{msg}' - received"
+		
 		connectedSock.sendall(msg.encode())
 	except ConnectionAbortedError:
 		sock.close()
+sock.close()
