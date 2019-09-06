@@ -7,13 +7,13 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 addr = ("localhost", 12458)
 sock.bind(addr)
 
+# Listening and Accepting
+sock.listen(5)
+
 while(True):
 	try:
-	# Listening and Accepting
-		sock.listen(5)
-
 		(connectedSock, clientAddress) = sock.accept()
-		
+
 		# Receiving Data
 		msg = connectedSock.recv(1024).decode()
 
