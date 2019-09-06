@@ -10,18 +10,18 @@ sock.bind(addr)
 while(True):
 	try:
 	# Listening and Accepting
-	sock.listen(5)
+		sock.listen(5)
 
-	(connectedSock, clientAddress) = sock.accept()
-	
-	# Receiving Data
-	msg = connectedSock.recv(1024).decode()
+		(connectedSock, clientAddress) = sock.accept()
+		
+		# Receiving Data
+		msg = connectedSock.recv(1024).decode()
 
-	print(msg)
+		print(msg)
 
-	reply = msg + ' - received'
+		reply = msg + ' - received'
 
-	connectedSock.sendall(reply.encode())
+		connectedSock.sendall(reply.encode())
 	except ConnectionAbortedError:
 		sock.close()
 sock.close()
