@@ -10,10 +10,12 @@ sock.bind(addr)
 # Listening and Accepting
 sock.listen(5)
 
-(connectedSock, clientAddress) = sock.accept()
+
 
 while(True):
 	try:
+		(connectedSock, clientAddress) = sock.accept()
+
 		# Receiving Data
 		msg = connectedSock.recv(1024).decode()
 
